@@ -1,3 +1,46 @@
-<p>
-  register works!
-</p>
+<div class="container">
+  <div class="container2">
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput autocomplete="username" />
+        <mat-icon matSuffix color="primary">alternate_email</mat-icon>
+        <mat-hint>Cree un nuevo nombre de usuario para su cuenta.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Nombre y Apellido</mat-label>
+        <input matInput />
+        <mat-icon matSuffix color="primary">face</mat-icon>
+        <mat-hint>Ingrese su nombre y apellido.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput autocomplete="new-password" />
+        <mat-icon matSuffix color="primary">vpn_key</mat-icon>
+        <mat-hint>Cree una nueva contraseña.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Confirme su contraseña.</mat-label>
+        <input matInput autocomplete="new-password" />
+        <mat-icon matSuffix color="primary">vpn_key</mat-icon>
+        <mat-hint>Confirme la contraseña.</mat-hint>
+      </mat-form-field>
+
+      <br />
+      <br />
+      <button mat-raised-button color="primary">
+        <mat-label>Registrar</mat-label>
+        <mat-icon matSuffix>arrow_forward_ios</mat-icon>
+      </button>
+      <br />
+      <br />
+      <span class="textRegister" style="font-style: italic;"
+        >¿Tienes cuenta?
+        <b (click)="this.router.navigateByUrl('/login')">Inicia Sesión</b></span
+      >
+    </form>
+  </div>
+</div>
