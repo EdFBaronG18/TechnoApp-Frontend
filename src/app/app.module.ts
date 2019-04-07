@@ -13,6 +13,7 @@ import { CommentDetailComponent } from './comment-detail/comment-detail.componen
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatButtonModule} from '@angular/material/button';
     RegisterComponent,
     ArtistDetailComponent,
     ArtistListComponent,
-    CommentDetailComponent
+    CommentDetailComponent,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,

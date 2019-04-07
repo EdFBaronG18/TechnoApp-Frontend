@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Comment } from '../model/object';
 
 @Component({
   selector: 'app-comment-detail',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentDetailComponent implements OnInit {
 
+  @Input() mySelectedComment : Comment;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  getDateString(): number{ 
+    return this.mySelectedComment.dateComent.getDate();
+  }
 }
