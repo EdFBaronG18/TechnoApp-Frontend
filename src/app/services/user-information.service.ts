@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../model/object';
 import { HttpParams, HttpClient } from '@angular/common/http';
+import { environment } from "src/environments/environment";
 
 const TOKEN = "TOKEN";
 
@@ -32,8 +33,8 @@ export class UserInformationService {
     const body = new HttpParams()
       .set("username", username + "")
       .set("password", password + "");
-      return null;
-   //TODO return this.http.post(environment.urlAutenticate, body);
+      
+      return this.http.post(environment.urlAutenticate, body);
   }
   
   isLogged(){
