@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { NeedAuthGuard } from 'src/NeedAuthGuard';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent, canActivate: [NeedAuthGuard]},
+  {path: 'register', component: RegisterComponent},
   {path: 'artists', component: ArtistListComponent, canActivate: [NeedAuthGuard]}
 ];
 
