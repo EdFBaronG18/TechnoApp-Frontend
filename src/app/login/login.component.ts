@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   async login(){
     let responseAutentication: any;
     let user : User;
-    this.servicioLogin.autenticate(this.username, this.password).subscribe(
+    await this.servicioLogin.autenticate(this.username, this.password).subscribe(
       dataResponse => {
         responseAutentication = dataResponse;
           console.log(responseAutentication);

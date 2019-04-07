@@ -14,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     ArtistDetailComponent,
     ArtistListComponent,
     CommentDetailComponent,
-    CommentListComponent
+    CommentListComponent,
+    ArtistProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

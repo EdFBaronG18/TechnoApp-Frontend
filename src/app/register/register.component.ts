@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   constructor( public router: Router) { }
-
-
   
   ngOnInit() {
   }
