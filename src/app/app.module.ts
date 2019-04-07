@@ -16,6 +16,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
 import {MatCardModule} from '@angular/material/card';
+import { NeedAuthGuard } from 'src/NeedAuthGuard';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,9 +39,11 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NeedAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

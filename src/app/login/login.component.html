@@ -3,7 +3,7 @@
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Usuario</mat-label>
-        <input matInput autocomplete="username" />
+        <input matInput [(ngModel)]="username" autocomplete="username" name = "user" />
         <mat-icon matSuffix color="primary">face</mat-icon>
         <mat-hint>Ingrese un usuario valido. </mat-hint>
       </mat-form-field>
@@ -12,6 +12,8 @@
         <mat-label>Contraseña</mat-label>
         <input
           matInput
+          [(ngModel)]="password"
+          name = "pass"
           [type]="hide ? 'password' : 'text'"
           autocomplete="current-password"
         />
@@ -27,7 +29,7 @@
 
       <br />
       <br />
-      <button mat-raised-button color="primary">
+      <button mat-raised-button (click) = "login()" color="primary">
         <mat-label>Iniciar Sesión</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>

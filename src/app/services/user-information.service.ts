@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../model/object';
-import { HttpParams, HttpClient } from '@angular/common/http';
+import { HttpParams, HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from "src/environments/environment";
 
 const TOKEN = "TOKEN";
@@ -30,11 +30,11 @@ export class UserInformationService {
   }
 
   autenticate(username: String, password: String) {
-    const body = new HttpParams()
+    const body = new HttpHeaders()
       .set("username", username + "")
       .set("password", password + "");
       
-      return this.http.post(environment.urlAutenticate, body);
+      return this.http.get(environment.urlAutenticate, {headers: body});
   }
   
   isLogged(){

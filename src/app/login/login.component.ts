@@ -11,12 +11,14 @@ import { User } from '../model/object';
 export class LoginComponent implements OnInit {
   private username: String;
   private password: String;
-  private message: String;
-  hide = true;
+  private message : String;
+  public hide = true;
   
   constructor(private servicioLogin: UserInformationService,public router: Router) {
-    if(servicioLogin.isLogged)
-    this.router.navigateByUrl("/artists");
+    
+    if(servicioLogin.isLogged())
+        this.router.navigateByUrl("/artists");
+
    }
 
   ngOnInit() {
@@ -41,5 +43,6 @@ export class LoginComponent implements OnInit {
       }, 
     );
   }
+  
 
 }
