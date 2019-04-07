@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  urlAutenticate:     "http://localhost:8081/validatedUser",
+  urlAutenticate:           "http://localhost:8081/validatedUser",
+  urlGetArtists:            "http://localhost:8081/getAllArtist",
+  urlAddArtist:             "http://localhost:8081/AddArtist",
+  urlAddComment:            "http://localhost:8081/addCommentary",
+  urlGetAllCommentByArtist: "http://localhost:8081/getAllCommentByArtistId"
 };
 
 /*

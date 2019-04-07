@@ -1,6 +1,6 @@
 
 export class User{
-    public id           : number;
+    public idUser       : number;
     public name         : String;
     public username     : String;
 }
@@ -8,7 +8,8 @@ export class User{
 export class Comment{
     public idComment    : number;
     public content      : String;
-    public artist       : String;
+    public artist       : Artist;
+    public dateComent   : Date;
     public userComment  : User;
 }
 
