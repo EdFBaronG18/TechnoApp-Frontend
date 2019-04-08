@@ -18,7 +18,7 @@ export class CommentListComponent implements OnInit {
     private userInfo: UserInformationService, private router: Router, private commentService: CommentService) { 
     this.myComments = new Array();
     this.myComment = new Comment();
-    this.myArtist = this.commentService.artist;
+    this.myArtist = JSON.parse(sessionStorage.getItem(commentService.TOKEN));
     this.myComments = this.myArtist.comments;
     this.myComment.user = userInfo.getUser();
     this.myComment.artist = this.myArtist;
@@ -32,8 +32,15 @@ export class CommentListComponent implements OnInit {
 
   addNewComment() {
     console.log("add comment");
+    this.myComment.create = new Date();
     this.commentService.insertComment(this.myComment);
+    this.myArtist.comments.push(this.myComment);
+   // this.myComments.push(this.myComment);
+    this.myComment.artist = null;
+    sessionStorage.setItem(this.commentService.TOKEN, JSON.stringify(this.myArtist));
     this.myComment = new Comment();
+    this.myComment.user   = this.userInfo.getUser();
+    this.myComment.artist = this.myArtist;
   }
 
   logout() {
