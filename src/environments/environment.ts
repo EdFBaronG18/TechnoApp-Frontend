@@ -8,7 +8,9 @@ export const environment = {
   urlGetArtists:            "http://localhost:8081/getAllArtist",
   urlAddArtist:             "http://localhost:8081/AddArtist",
   urlAddComment:            "http://localhost:8081/addCommentary",
-  urlGetAllCommentByArtist: "http://localhost:8081/getAllCommentByArtistId"
+  urlGetAllCommentByArtist: "http://localhost:8081/getAllCommentByArtistId",
+  urlAddUser:               "http://localhost:8081/addUser",
+  urlGetUserByUsername:     "http://localhost:8081/getUserByUsername"
 };
 
 /*
