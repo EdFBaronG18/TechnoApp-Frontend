@@ -22,9 +22,13 @@ export class CommentListComponent implements OnInit {
     this.myComment.user = userInfo.getUser();
     this.myComment.artist = this.myArtist;
 
-    console.log("Hello");
-    
+    console.log("Hello");    
     console.log(this.myArtist);
+
+    console.log("COMMENTS");
+    this.myArtist.comments.forEach(element => {
+      element.create = new Date(element.create);
+    });
   }
 
   ngOnInit() {}
