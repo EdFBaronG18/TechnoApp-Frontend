@@ -20,7 +20,7 @@ export class CommentService {
     console.log("EL COMENTARIO A INGRESAR ES:", comment);
     const body = new HttpParams()
       .set("idArtist", comment.artist.idArtist + "")
-      .set("idUser", comment.userComment.idUser + "")
+      .set("idUser", comment.user.idUser + "")
       .set("content", comment.content+"");
     return this.http.post(environment.urlAddComment, body).subscribe();
   }
