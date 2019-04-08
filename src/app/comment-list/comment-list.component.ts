@@ -18,20 +18,14 @@ export class CommentListComponent implements OnInit {
     private userInfo: UserInformationService, private router: Router, private commentService: CommentService) { 
     this.myComments = new Array();
     this.myComment = new Comment();
-    this.myComment.user = userInfo.getUser();
     this.myArtist = this.commentService.artist;
     this.myComments = this.myArtist.comments;
+    this.myComment.user = userInfo.getUser();
+    this.myComment.artist = this.myArtist;
 
     console.log("Hello");
     
     console.log(this.myArtist);
-    
-    // this.commentService
-    //   .getAllCommentsByArtist(this.myArtist)
-    //   .subscribe(comentarios => {
-    //     this.myComments = comentarios;
-    //     console.log(this.myComments);
-    //   });
   }
 
   ngOnInit() {}

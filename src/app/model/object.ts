@@ -7,7 +7,6 @@ export class User{
 
 export class Comment{
     public artist       : Artist;
-
     public idCommentary : number;
     public content      : String;
     public create       : Date;
@@ -19,11 +18,12 @@ export class Artist{
     public name         : String;
     public image        : String;
     public description  : String;
+    public category     : Category;
     public comments     : Array<Comment>;
 }
 
 export class Category{
     public idCategory   : number;
     public name         : String;
-    public list         : Array<Artist>;
+    public artists      : Array<Artist>;
 }
