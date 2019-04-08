@@ -18,9 +18,9 @@ export class ArtistsService {
   insertArtist(artist: Artist) {
     console.log("EL ARTISTA A INGRESAR ES:", artist);
     const body = new HttpParams()
-      .set("name", artist.artistName + "")
+      .set("name", artist.name + "")
       .set("contdescription", artist.description + "")
-      .set("image", artist.urlImage+"");
+      .set("image", artist.image+"");
     return this.http.post(environment.urlAddArtist, body).subscribe();
   }
 
