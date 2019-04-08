@@ -1,7 +1,7 @@
 <div class="center">
   <app-artist-profile [mySelectedArtist]="myArtist"></app-artist-profile>
 
-  <div *ngFor="let comment of myComments.slice().reverse()">
+  <div *ngFor="let comment of myComments">
     <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
   </div>
 

@@ -21,6 +21,7 @@
           name="desc"
         >
         </textarea>
+        <mat-icon matSuffix color="primary">comment</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="ancho" appearance="outline">
@@ -32,8 +33,9 @@
           name="desc"
         >
         </textarea>
+        <mat-icon matSuffix color="primary">photo</mat-icon>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field class="ancho" appareance="outline">
         <mat-label>Categoria</mat-label>
         <mat-select [(ngModel)]="myCategorySelected" name = "category">
           <mat-option
@@ -49,7 +51,11 @@
 
       <br />
       <br />
-      <button mat-raised-button color="primary" (click)="addArtist()">
+      <button mat-raised-button style="background-color: cadetblue; float: left;" (click)="goBack()">
+        <mat-label>Regresar</mat-label>
+      </button>
+
+      <button mat-raised-button color="primary" style="float: right;" (click)="addArtist()">
         <mat-label>Agregar artista</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>
