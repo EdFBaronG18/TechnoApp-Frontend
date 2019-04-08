@@ -15,16 +15,17 @@ export class CommentListComponent implements OnInit {
   myComment: Comment;
 
   constructor(
-    private userInfo: UserInformationService,
-    private router: Router,
-    private commentService: CommentService
-  ) {
+    private userInfo: UserInformationService, private router: Router, private commentService: CommentService) { 
     this.myComments = new Array();
     this.myComment = new Comment();
     this.myComment.user = userInfo.getUser();
     this.myArtist = this.commentService.artist;
     this.myComments = this.myArtist.comments;
 
+    console.log("Hello");
+    
+    console.log(this.myArtist);
+    
     // this.commentService
     //   .getAllCommentsByArtist(this.myArtist)
     //   .subscribe(comentarios => {
