@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'detail', component: ArtistListComponent},
-  {path: 'comments', component: CommentListComponent},
+  {path: 'comments', component: CommentListComponent, canActivate: [NeedAuthGuard]},
   {path: 'artists', component: ArtistListComponent, canActivate: [NeedAuthGuard]}
 ];
 
