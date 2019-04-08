@@ -1,9 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { User } from "../model/object";
-import { HttpParams } from "@angular/common/http";
 import { UserService } from "../services/user.service";
-import { UserInformationService } from "../services/user-information.service";
 
 @Component({
   selector: "app-register",
@@ -17,10 +15,7 @@ export class RegisterComponent implements OnInit {
   myUser: User;
   name: String;
 
-  constructor(
-    private userService: UserService,
-    public router: Router
-  ) {
+  constructor(private userService: UserService, public router: Router) {
     this.myUser = new User();
   }
 

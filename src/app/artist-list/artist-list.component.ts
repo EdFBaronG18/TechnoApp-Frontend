@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistsService } from '../services/artists.service';
 import { Artist } from '../model/object';
+import { UserInformationService } from '../services/user-information.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-artist-list',
@@ -11,9 +13,9 @@ export class ArtistListComponent implements OnInit {
   myArtists: Array<Artist>;
 
 
-  constructor(private artistService: ArtistsService) {
+  constructor(private userInfo: UserInformationService, private artistService: ArtistsService,private router: Router ) {
     this.myArtists = new Array();
-
+    
     this.artistService.getAllArtists().subscribe(
       artistas => {
         this.myArtists = artistas;
@@ -24,6 +26,11 @@ export class ArtistListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.userInfo.logout();
+    this.router.navigateByUrl("/login");
   }
 
 }
