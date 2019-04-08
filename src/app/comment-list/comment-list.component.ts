@@ -14,8 +14,7 @@ export class CommentListComponent implements OnInit {
   myComments: Array<Comment>;
   myComment: Comment;
 
-  constructor(
-    private userInfo: UserInformationService, private router: Router, private commentService: CommentService) { 
+  constructor(private userInfo: UserInformationService, private router: Router, private commentService: CommentService) { 
     this.myComments = new Array();
     this.myComment = new Comment();
     this.myArtist = JSON.parse(sessionStorage.getItem(commentService.TOKEN));
@@ -48,7 +47,11 @@ export class CommentListComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
-  getAllComments() {
-
+  goBack() {
+    this.commentService = null;
+    this.router.navigateByUrl("/");
   }
-}
+
+
+ }
+

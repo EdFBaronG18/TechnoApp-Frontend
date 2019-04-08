@@ -55,13 +55,11 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  private validateUsername(username: String){
-    
+  private validateUsername(username: String): boolean {
     var x = this.userService.userDontExist(username);
     console.log(x);
-    
-    if (username.length == 0 || x != null)
-      return false;
+
+    if (username.length == 0 || x != null) return false;
     return true;
   }
 

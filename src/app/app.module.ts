@@ -20,6 +20,7 @@ import { NeedAuthGuard } from 'src/NeedAuthGuard';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
@@ -31,7 +32,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     ArtistListComponent,
     CommentDetailComponent,
     CommentListComponent,
-    ArtistProfileComponent
+    ArtistProfileComponent,
+    ArtistInsertComponent
   ],
   imports: [
     BrowserModule,
