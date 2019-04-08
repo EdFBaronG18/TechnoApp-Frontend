@@ -52,6 +52,5 @@ export class CommentListComponent implements OnInit {
     this.router.navigateByUrl("/");
   }
 
-
  }
 

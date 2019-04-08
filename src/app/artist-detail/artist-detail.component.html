@@ -1,20 +1,36 @@
 <div class="card">
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title>{{mySelectedArtist.name}}</mat-card-title>
-      <mat-card-subtitle>Categorias... {{mySelectedArtist.idArtist}}</mat-card-subtitle>
+      <mat-card-title>{{ mySelectedArtist.name }}</mat-card-title>
+      <mat-card-subtitle
+        >Categorias... {{ mySelectedArtist.idArtist }}</mat-card-subtitle
+      >
     </mat-card-header>
-    <img
-      mat-card-image
-      src = {{mySelectedArtist.image}}   
-    />
+    <img mat-card-image src="{{ mySelectedArtist.image }}" />
     <mat-card-content>
-      <p>
-        {{mySelectedArtist.description}}
-      </p>
+      <mat-form-field class="ancho" appearance="none">
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          readonly="true"
+          value="{{ mySelectedArtist.description }}"
+        >
+        </textarea>
+      </mat-form-field>
     </mat-card-content>
-    <mat-card-actions >
-      <button mat-raised-button color="primary" (click) = more() >Ver más</button>
+    <mat-card-actions style="padding: 20px;">
+      <button mat-raised-button style="visibility:hidden">
+        Oculto
+      </button>
+      <button
+        mat-raised-button
+        style="float: right; position: unset;"
+        color="primary"
+        (click)="more()"
+      >
+      <mat-label>Ver más</mat-label>
+      <mat-icon matSuffix>arrow_forward_ios</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

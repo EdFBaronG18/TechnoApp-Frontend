@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatCardModule,
     FormsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSelectModule
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]

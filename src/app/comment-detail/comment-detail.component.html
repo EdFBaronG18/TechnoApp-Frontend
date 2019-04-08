@@ -1,17 +1,25 @@
 <div class="card">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{mySelectedComment.user.name}}</mat-card-title>
-        <mat-card-subtitle>{{mySelectedComment.user.username}}</mat-card-subtitle>
-        <mat-card-subtitle>{{mySelectedComment.create}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          {{mySelectedComment.content}}
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-
-  
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ mySelectedComment.user.name }}</mat-card-title>
+      <mat-card-subtitle>{{
+        mySelectedComment.user.username
+      }}</mat-card-subtitle>
+      <mat-card-subtitle>{{
+        mySelectedComment.create.toLocaleString()
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="ancho" appearance="none">
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          readonly="true"
+          value="{{ mySelectedComment.content }}"
+        >
+        </textarea>
+        <br />
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+</div>

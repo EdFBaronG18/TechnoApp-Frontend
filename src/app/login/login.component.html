@@ -5,7 +5,6 @@
         <mat-label>Usuario</mat-label>
         <input matInput [(ngModel)]="username" autocomplete="username" name = "user" />
         <mat-icon matSuffix color="primary">face</mat-icon>
-        <mat-hint>Ingrese un usuario valido. </mat-hint>
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="outline">
@@ -24,7 +23,7 @@
           (click)="hide = !hide"
           >{{ hide ? "visibility_off" : "visibility" }}</mat-icon
         >
-        <mat-hint>Ingrese una contraseña valida.</mat-hint>
+        <mat-hint style="color: red;">{{message}}</mat-hint>
       </mat-form-field>
 
       <br />

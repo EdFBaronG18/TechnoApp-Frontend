@@ -6,8 +6,14 @@
     <mat-card-subtitle>Categorias...</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      {{ mySelectedArtist.description }}
-    </p>
+    <mat-form-field class="ancho" appearance="none">
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        readonly="true"
+        value="{{ mySelectedArtist.description }}"
+      >
+      </textarea>
+    </mat-form-field>
   </mat-card-content>
 </mat-card>
