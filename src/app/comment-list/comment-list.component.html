@@ -1,27 +1,28 @@
 <div class="center">
+  <app-artist-profile [mySelectedArtist]="myArtist"></app-artist-profile>
 
-<app-artist-profile [mySelectedArtist]="myArtist"></app-artist-profile>
+  <div *ngFor="let comment of myComments.slice().reverse()">
+    <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
+  </div>
 
-<div *ngFor="let comment of myComments.slice().reverse()">
-  <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
-</div>
-
-<div>
-  <mat-card class="example-card">
-    <mat-card-content>
-      <mat-form-field>
-        <textarea
-          matInput
-          cdkTextareaAutosize
-          placeholder="Agrega un comentario..."
-          [(ngModel)]="myComment.content"
-        >
-        </textarea>
-      </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button (click)="addNewComment()">Comentar</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+  <div class="example-card">
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field class="ancho" appearance="outline">
+          <mat-label>Agrega un comentario...</mat-label>
+          <textarea
+            matInput
+            cdkTextareaAutosize
+            placeholder=""
+            [(ngModel)]="myComment.content"
+          >
+          </textarea>
+          <br />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addNewComment()">
+          Comentar
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
