@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistsService } from '../services/artists.service';
-import { Artist } from '../model/object';
+import { Artist, Category } from '../model/object';
 import { UserInformationService } from '../services/user-information.service';
 import { Router } from '@angular/router';
 
@@ -20,6 +20,7 @@ export class ArtistListComponent implements OnInit {
       artistas => {
         console.log(artistas);
         this.myArtists = artistas;
+        console.log((this.myArtists[0].categories));
         console.log(this.myArtists);
       }
     );

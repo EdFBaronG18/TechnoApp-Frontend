@@ -18,7 +18,7 @@ export class Artist{
     public name         : String;
     public image        : String;
     public description  : String;
-    public category     : Category;
+    public categories   : Category;
     public comments     : Array<Comment>;
 }
 

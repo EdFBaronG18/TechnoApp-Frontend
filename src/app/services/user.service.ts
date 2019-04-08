@@ -18,14 +18,9 @@ export class UserService {
     return this.http.post(environment.urlAddUser, body).subscribe();
   }
 
-  async userDontExist(username: String){
+  userDontExist(username: String){
     const body = new HttpParams().set("username", username + "");
-    await this.http
-      .post(environment.urlGetUserByUsername, body)
-      .subscribe(response => {
-        console.log(response);
-        
-        return response;
-      });
+    return this.http
+      .post(environment.urlGetUserByUsername, body);
   }
 }

@@ -20,7 +20,7 @@ export class ArtistsService {
       .set("name", artist.name + "")
       .set("description", artist.description + "")
       .set("image", artist.image + "")
-      .set("idCategory",artist.category.idCategory + "");
+      .set("idCategory",artist.categories.idCategory + "");
       console.log(body);
       
     return this.http.post(environment.urlAddArtist, body).subscribe();

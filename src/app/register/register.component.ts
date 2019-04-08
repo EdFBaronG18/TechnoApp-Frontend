@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { User } from "../model/object";
 import { UserService } from "../services/user.service";
+import { element } from '@angular/core/src/render3';
 
 @Component({
   selector: "app-register",
@@ -21,46 +22,46 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {}
 
-  addNewUser() {
+  async addNewUser() {
     var good = true;
     this.registerError = "No se ha podido registrar al usuario:\n";
-    if (!this.validateUsername(this.myUser.username)) {
-      this.registerError += "- Nombre de usuario inválido\n";
-      this.myUser.username = "";
-      good = false;
-    }
 
-    if (!this.validateName(this.myUser.name)) {
-      this.registerError += "- Nombre inválido\n";
-      good = false;
-    }
-
-    if (this.passwordA != this.passwordB) {
-      this.registerError += "- Las contraseñas no coinciden\n";
-      good = false;
-    } else {
-      if (!this.validatePassword(this.passwordA)) {
-        this.registerError += "- Contraseña inválida\n";
-        good = false;
+    await this.userService.userDontExist(this.myUser.username).subscribe(
+      element =>{
+        console.log("ELEMENT", element);
+        console.log("RESPOS", element != null);
+        
+        if ((this.myUser.username.length == 0) || (element != null)){
+          this.registerError += "- Nombre de usuario inválido\n";
+          this.myUser.username = "";
+          good = false;
+        }
+        if (!( this.validateName(this.myUser.name))) {
+          this.registerError += "- Nombre inválido\n";
+          good = false;
+        }
+        if (this.passwordA != this.passwordB) {
+          this.registerError += "- Las contraseñas no coinciden\n";
+          good = false;
+        } else {
+          if (!this.validatePassword(this.passwordA)) {
+            this.registerError += "- Contraseña inválida\n";
+            good = false;
+          }
+        }
+    
+        if (good) {
+          this.userService.registerUser(this.myUser, this.passwordA);
+          this.myUser = new User();
+          this.router.navigateByUrl("/login");
+        } else {
+          alert(this.registerError);
+          this.passwordA = this.passwordB = "";
+        }
       }
-    }
+    );
 
-    if (good) {
-      this.userService.registerUser(this.myUser, this.passwordA);
-      this.myUser = new User();
-      this.router.navigateByUrl("/login");
-    } else {
-      alert(this.registerError);
-      this.passwordA = this.passwordB = "";
-    }
-  }
 
-  private validateUsername(username: String): boolean {
-    var x = this.userService.userDontExist(username);
-    console.log(x);
-
-    if (username.length == 0 || x != null) return false;
-    return true;
   }
 
   private validateName(name: String): boolean {
