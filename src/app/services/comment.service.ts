@@ -4,13 +4,12 @@ import { Observable } from 'rxjs';
 import { Comment, Artist } from '../model/object';
 import { environment } from 'src/environments/environment';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
-
-  artist : Artist;
-  
+  TOKEN = "TOKEN";
   constructor(private http: HttpClient) {}
 
   getAllCommentsByArtist(artist: Artist): Observable<Comment[]> {
