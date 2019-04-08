@@ -40,6 +40,7 @@ export class UserInformationService {
   isLogged(){
     return localStorage.getItem(TOKEN) != null;
   }
+  
 
   loggin(information: string){
     localStorage.setItem(TOKEN, information);

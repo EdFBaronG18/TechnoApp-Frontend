@@ -21,6 +21,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
     MatButtonModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]

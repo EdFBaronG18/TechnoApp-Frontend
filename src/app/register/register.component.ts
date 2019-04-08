@@ -48,6 +48,7 @@ export class RegisterComponent implements OnInit {
     if (good) {
       this.userService.registerUser(this.myUser, this.passwordA);
       this.myUser = new User();
+      this.router.navigateByUrl("/login");
     } else {
       alert(this.registerError);
       this.passwordA = this.passwordB = "";
