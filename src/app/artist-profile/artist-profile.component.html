@@ -1,3 +1,18 @@
-<p>
-  artist-profile works!
-</p>
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{mySelectedArtist.name}}</mat-card-title>
+      <mat-card-subtitle>Categorias... {{mySelectedArtist.idArtist}}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src = {{mySelectedArtist.image}}   
+    />
+    <mat-card-content>
+      <p>
+        {{mySelectedArtist.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions >
+      <button mat-button (click) = more() >Ver más</button>
+    </mat-card-actions>
+  </mat-card>>

@@ -1,6 +1,24 @@
-<app-artist-detail [mySelectedArtist] = "myArtist"></app-artist-detail>
+<app-artist-detail [mySelectedArtist]="myArtist"></app-artist-detail>
 
 <div *ngFor="let comment of myComments.slice().reverse()">
-    <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
-  </div>
+  <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
+</div>
 
+<div>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-form-field>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          placeholder="Agrega un comentario..."
+          [(ngModel)]="myComment.content"
+        >
+        </textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="addNewComment()">Comentar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
