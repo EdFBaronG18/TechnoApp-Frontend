@@ -8,6 +8,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CommentService {
+
+  artist : Artist;
+  
   constructor(private http: HttpClient) {}
 
   getAllCommentsByArtist(artist: Artist): Observable<Comment[]> {

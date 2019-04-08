@@ -1,3 +1,6 @@
-<p>
-  comment-list works!
-</p>
+<app-artist-detail [mySelectedArtist] = "myArtist"></app-artist-detail>
+
+<div *ngFor="let comment of myComments.slice().reverse()">
+    <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
+  </div>
+
