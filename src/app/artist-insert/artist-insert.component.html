@@ -23,14 +23,19 @@
         </textarea>
       </mat-form-field>
 
+      <mat-form-field class="ancho" appearance="outline">
+        <mat-label>Imagen</mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          [(ngModel)]="this.myArtist.image"
+          name="desc"
+        >
+        </textarea>
+      </mat-form-field>
       <mat-form-field>
         <mat-label>Categoria</mat-label>
-        <mat-select [(ngModel)]="myCategorySelected">
-          <mat-option value="Techno">Techno</mat-option>
-          <mat-option value="House">House</mat-option>
-          <mat-option value="Ambient">Ambient</mat-option>
-
-          <!-- Pero hacerlo aqui con un for y el arreglo de categorias que se traiga. -->
+        <mat-select [(ngModel)]="myCategorySelected" name = "category">
           <mat-option
             *ngFor="let categoria of myCategories"
             [value]="categoria"

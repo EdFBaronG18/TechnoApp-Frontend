@@ -10,7 +10,9 @@ export class CommentDetailComponent implements OnInit {
 
   @Input() mySelectedComment : Comment;
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit() {
   }

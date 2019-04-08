@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   urlAutenticate:           "http://localhost:8081/validatedUser",
   urlGetArtists:            "http://localhost:8081/getAllArtist",
-  urlAddArtist:             "http://localhost:8081/AddArtist",
+  urlAddArtist:             "http://localhost:8081/addArtist",
   urlAddComment:            "http://localhost:8081/addCommentary",
   urlGetAllCommentByArtist: "http://localhost:8081/getAllCommentByArtistId",
   urlAddUser:               "http://localhost:8081/addUser",

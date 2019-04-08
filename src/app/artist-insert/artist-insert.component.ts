@@ -22,7 +22,11 @@ export class ArtistInsertComponent implements OnInit {
   ) {
     this.myArtist = new Artist();
     this.myCategorySelected = null;
-    //TODO agregar todos las categorias a myCategories
+    this.myCategories = new Array();
+   
+    artistService.getAllCategories().subscribe(element =>{
+      this.myCategories = element;
+    });
   }
 
   ngOnInit() {}
@@ -30,7 +34,9 @@ export class ArtistInsertComponent implements OnInit {
   addArtist() {
     var good = true;
     this.registerError = "No se ha podido crear el artista:\n";
-    if (this.validateName(this.myArtist.name)) {
+    //console.log(this.myCategorySelected);
+    
+    if (!this.validateName(this.myArtist.name)) {
       this.registerError += "- Nombre inválido\n";
       this.myArtist.name = "";
       good = false;
@@ -46,7 +52,10 @@ export class ArtistInsertComponent implements OnInit {
     }
 
     if (good) {
-      this.artistService.insertArtist(this.myArtist,this.myCategorySelected.idCategory);
+      console.log(this.myCategorySelected);
+      
+      this.myArtist.category = this.myCategorySelected;
+      this.artistService.insertArtist(this.myArtist);
       this.myArtist = new Artist();
       this.myCategorySelected = null;
     } else {
@@ -55,10 +64,12 @@ export class ArtistInsertComponent implements OnInit {
   }
 
   private validateName(name: String): boolean {
+    if(name == null) return false;
     return name.length != 0;
   }
 
   private validateDescription(desc: String): boolean {
+    if(desc == null) return false;
     return desc.length != 0;
   }
 
