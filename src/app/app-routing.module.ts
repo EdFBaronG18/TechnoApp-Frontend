@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', redirectTo:'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'detail', component: ArtistDetailComponent},
+  {path: 'detail', component: ArtistListComponent},
   {path: 'artists', component: ArtistListComponent, canActivate: [NeedAuthGuard]}
 ];
 

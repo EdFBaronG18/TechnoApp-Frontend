@@ -15,8 +15,8 @@ export class Comment{
 
 export class Artist{
     public idArtist     : number;
-    public artistName   : String;
-    public urlImage     : String;
+    public name         : String;
+    public image        : String;
     public description  : String;
 }
 
