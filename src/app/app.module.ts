@@ -20,6 +20,7 @@ import { NeedAuthGuard } from 'src/NeedAuthGuard';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]

@@ -1,1 +1,13 @@
+<mat-toolbar class="toolbar-main">
+  <mat-toolbar-row>
+    <span>TechnoAPP</span>
+    <span class="menu-spacer"></span>
+    <div *ngIf="this.userInfo.isLogged()">
+      <button mat-button (click)="logout()" style="width: 100px">
+        Cerrar Sesion
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
