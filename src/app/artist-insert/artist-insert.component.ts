@@ -78,6 +78,6 @@ export class ArtistInsertComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/artists");
   }
 }
