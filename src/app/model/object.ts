@@ -6,11 +6,12 @@ export class User{
 }
 
 export class Comment{
-    public idComment    : number;
-    public content      : String;
     public artist       : Artist;
-    public dateComent   : Date;
-    public userComment  : User;
+
+    public idCommentary : number;
+    public content      : String;
+    public create       : Date;
+    public user         : User;
 }
 
 export class Artist{

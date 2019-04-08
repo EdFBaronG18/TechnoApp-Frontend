@@ -16,6 +16,8 @@ export class CommentDetailComponent implements OnInit {
   }
 
   getDateString(): number{ 
-    return this.mySelectedComment.dateComent.getDate();
+    return this.mySelectedComment.create.getDate();
   }
+
+  
 }
