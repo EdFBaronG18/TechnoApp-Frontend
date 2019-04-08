@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Artist } from '../model/object';
+import { Router } from '@angular/router';
+import { ArtistsService } from '../services/artists.service';
+import { CommentService } from '../services/comment.service';
 
 @Component({
   selector: 'app-artist-detail',
@@ -10,9 +13,13 @@ export class ArtistDetailComponent implements OnInit {
 
   @Input() mySelectedArtist: Artist;
 
-  constructor() { }
+  constructor(private router : Router, private servArtist : CommentService) { }
 
   ngOnInit() {
   }
 
+  more(){
+    this.servArtist.artist = this.mySelectedArtist;
+    this.router.navigateByUrl("/comments");
+  }
 }

@@ -20,7 +20,6 @@ export class ArtistListComponent implements OnInit {
       artistas => {
         this.myArtists = artistas;
         console.log(this.myArtists);
-        
       }
     );
   }

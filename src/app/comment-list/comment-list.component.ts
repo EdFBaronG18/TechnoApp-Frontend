@@ -1,49 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import { Comment, Artist } from '../model/object';
-import { Router } from '@angular/router';
-import { UserInformationService } from '../services/user-information.service';
-import { CommentService } from '../services/comment.service';
+import { Component, OnInit } from "@angular/core";
+import { Comment, Artist } from "../model/object";
+import { Router } from "@angular/router";
+import { UserInformationService } from "../services/user-information.service";
+import { CommentService } from "../services/comment.service";
 
 @Component({
-  selector: 'app-comment-list',
-  templateUrl: './comment-list.component.html',
-  styleUrls: ['./comment-list.component.css']
+  selector: "app-comment-list",
+  templateUrl: "./comment-list.component.html",
+  styleUrls: ["./comment-list.component.css"]
 })
 export class CommentListComponent implements OnInit {
-  myArtist: Artist; 
+  myArtist: Artist;
   myComments: Array<Comment>;
   myComment: Comment;
 
-  //TODO
-
-  constructor(private userInfo: UserInformationService, private router: Router, private commentService: CommentService) {
-
+  constructor(
+    private userInfo: UserInformationService,
+    private router: Router,
+    private commentService: CommentService
+  ) {
     this.myComments = new Array();
     this.myComment = new Comment();
     this.myComment.user = userInfo.getUser();
+    this.myArtist = this.commentService.artist;
+    this.myComments = this.myArtist.comments;
 
-    this.commentService.getAllCommentsByArtist(this.myArtist).subscribe(
-      artistas => {
-        this.myComments = artistas;
-        console.log(this.myComments);
-        
-      }
-    );
-
-   }
-
-  ngOnInit() {
+    // this.commentService
+    //   .getAllCommentsByArtist(this.myArtist)
+    //   .subscribe(comentarios => {
+    //     this.myComments = comentarios;
+    //     console.log(this.myComments);
+    //   });
   }
 
-  addNewTweet() {
-    console.log("add tweet");
+  ngOnInit() {}
+
+  addNewComment() {
+    console.log("add comment");
     this.commentService.insertComment(this.myComment);
     this.myComment = new Comment();
   }
 
-  logout(){
+  logout() {
     this.userInfo.logout();
     this.router.navigateByUrl("/login");
   }
 
+  getAllComments() {
+
+  }
 }

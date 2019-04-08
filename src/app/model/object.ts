@@ -19,6 +19,7 @@ export class Artist{
     public name         : String;
     public image        : String;
     public description  : String;
+    public comments     : Array<Comment>;
 }
 
 export class Category{
