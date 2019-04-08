@@ -20,6 +20,7 @@ import { NeedAuthGuard } from 'src/NeedAuthGuard';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     ArtistListComponent,
     CommentDetailComponent,
     CommentListComponent,
-    ArtistProfileComponent
+    ArtistProfileComponent,
+    ArtistInsertComponent
   ],
   imports: [
     BrowserModule,
