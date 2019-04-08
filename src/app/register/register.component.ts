@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {}
+
   addNewUser() {
     var good = true;
     this.registerError = "No se ha podido registrar al usuario:\n";
@@ -53,13 +54,11 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  private validateUsername(username: String){
-    
+  private validateUsername(username: String): boolean {
     var x = this.userService.userDontExist(username);
     console.log(x);
-    
-    if (username.length == 0 || x != null)
-      return false;
+
+    if (username.length == 0 || x != null) return false;
     return true;
   }
 

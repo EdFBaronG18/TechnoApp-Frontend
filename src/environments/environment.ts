@@ -10,7 +10,8 @@ export const environment = {
   urlAddComment:            "http://localhost:8081/addCommentary",
   urlGetAllCommentByArtist: "http://localhost:8081/getAllCommentByArtistId",
   urlAddUser:               "http://localhost:8081/addUser",
-  urlGetUserByUsername:     "http://localhost:8081/getUserByUsername"
+  urlGetUserByUsername:     "http://localhost:8081/getUserByUsername",
+  urlGetAllCategories:       "http://localhost:8081/getAllCategories"
 };
 
 /*
