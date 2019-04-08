@@ -3,8 +3,11 @@
     <span>TechnoAPP</span>
     <span class="menu-spacer"></span>
     <div *ngIf="this.userInfo.isLogged()">
-      <button mat-button (click)="logout()" style="width: 100px">
-        Cerrar Sesion
+      <button mat-button (click)="addArtist()">
+        Agregar Artista
+      </button>
+      <button mat-button (click)="logout()">
+        Cerrar Sesión
       </button>
     </div>
   </mat-toolbar-row>

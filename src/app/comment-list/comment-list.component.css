@@ -18,3 +18,13 @@
   .ancho {
     width: 100%;
   }
+
+  .colorBack{
+    background-color: rgb(178, 229, 231);
+    display: inline;
+    
+  }
+
+  .colorComment {
+    float: right;
+  }

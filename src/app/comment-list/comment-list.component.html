@@ -9,7 +9,7 @@
     <mat-card>
       <mat-card-content>
         <mat-form-field class="ancho" appearance="outline">
-          <mat-label>Agrega un comentario...</mat-label>
+          <mat-label> Agrega un comentario... </mat-label>
           <textarea
             matInput
             cdkTextareaAutosize
@@ -19,8 +19,18 @@
           </textarea>
           <br />
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="addNewComment()">
+
+        <button
+          mat-raised-button
+          class="colorComment"
+          color="primary"
+          (click)="addNewComment()"
+        >
           Comentar
+        </button>
+
+        <button mat-raised-button class="colorBack" (click)="goBack()">
+          Regresar
         </button>
       </mat-card-content>
     </mat-card>

@@ -3,41 +3,61 @@
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Usuario</mat-label>
-        <input matInput autocomplete="username" 
-        [(ngModel)]="myUser.username" name="username"/>
+        <input
+          matInput
+          autocomplete="username"
+          [(ngModel)]="myUser.username"
+          name="username"
+        />
         <mat-icon matSuffix color="primary">alternate_email</mat-icon>
         <mat-hint>Cree un nuevo nombre de usuario para su cuenta.</mat-hint>
       </mat-form-field>
 
+      <br />
+      <br />
+
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Nombre y Apellido</mat-label>
-        <input matInput 
-        [(ngModel)]="myUser.name" name="name"/>
+        <input matInput [(ngModel)]="myUser.name" name="name" />
         <mat-icon matSuffix color="primary">face</mat-icon>
         <mat-hint>Ingrese su nombre y apellido.</mat-hint>
       </mat-form-field>
 
+      <br />
+      <br />
+
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Contraseña</mat-label>
-        <input matInput autocomplete="new-password" type="password"
-        [(ngModel)]="passwordA"
-        name="passA"/>
+        <input
+          matInput
+          autocomplete="new-password"
+          type="password"
+          [(ngModel)]="passwordA"
+          name="passA"
+        />
         <mat-icon matSuffix color="primary">vpn_key</mat-icon>
         <mat-hint>Cree una nueva contraseña.</mat-hint>
       </mat-form-field>
 
+      <br />
+      <br />
+
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Confirme su contraseña.</mat-label>
-        <input matInput autocomplete="new-password" type="password"
-        [(ngModel)]="passwordB"
-        name="passB"/>
+        <input
+          matInput
+          autocomplete="new-password"
+          type="password"
+          [(ngModel)]="passwordB"
+          name="passB"
+        />
         <mat-icon matSuffix color="primary">vpn_key</mat-icon>
         <mat-hint>Confirme la contraseña.</mat-hint>
       </mat-form-field>
 
       <br />
       <br />
-      <button mat-raised-button color="primary" (click)=addNewUser()>
+      <button mat-raised-button color="primary" (click)="addNewUser()">
         <mat-label>Registrar</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>

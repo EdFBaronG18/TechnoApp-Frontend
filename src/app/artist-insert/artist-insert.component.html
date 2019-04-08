@@ -1,3 +1,53 @@
-<p>
-  artist-insert works!
-</p>
+<div class="container">
+  <div class="container2">
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          autocomplete="nombre"
+          [(ngModel)]="this.myArtist.name"
+          name="username"
+        />
+        <mat-icon matSuffix color="primary">alternate_email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="ancho" appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          [(ngModel)]="this.myArtist.description"
+          name="desc"
+        >
+        </textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <mat-select [(ngModel)]="myCategorySelected">
+          <mat-option value="Techno">Techno</mat-option>
+          <mat-option value="House">House</mat-option>
+          <mat-option value="Ambient">Ambient</mat-option>
+
+          <!-- Pero hacerlo aqui con un for y el arreglo de categorias que se traiga. -->
+          <mat-option
+            *ngFor="let categoria of myCategories"
+            [value]="categoria"
+          >
+            {{ categoria.name }}
+          </mat-option>
+        </mat-select>
+
+      
+      </mat-form-field>
+
+      <br />
+      <br />
+      <button mat-raised-button color="primary" (click)="addArtist()">
+        <mat-label>Agregar artista</mat-label>
+        <mat-icon matSuffix>arrow_forward_ios</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>

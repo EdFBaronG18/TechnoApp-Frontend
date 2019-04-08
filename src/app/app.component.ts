@@ -17,4 +17,8 @@ export class AppComponent {
     this.userInfo.logout();
     this.router.navigateByUrl("/login");
   }
+
+  addArtist(){
+    this.router.navigateByUrl("/addArtist");
+  }
 }

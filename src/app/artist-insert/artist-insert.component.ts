@@ -29,7 +29,7 @@ export class ArtistInsertComponent implements OnInit {
 
   addArtist() {
     var good = true;
-    this.registerError = "No se ha podido crear a artista:\n";
+    this.registerError = "No se ha podido crear el artista:\n";
     if (this.validateName(this.myArtist.name)) {
       this.registerError += "- Nombre inválido\n";
       this.myArtist.name = "";
@@ -52,8 +52,6 @@ export class ArtistInsertComponent implements OnInit {
     } else {
       alert(this.registerError);
     }
-
-
   }
 
   private validateName(name: String): boolean {
@@ -66,11 +64,6 @@ export class ArtistInsertComponent implements OnInit {
 
   private validateCategory(cat: Category): boolean {
     return cat != null;
-  }
-
-  logout() {
-    this.userInfo.logout();
-    this.router.navigateByUrl("/login");
   }
 
   goBack() {
