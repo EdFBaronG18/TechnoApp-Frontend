@@ -1,3 +1,13 @@
-<p>
-  artist-profile works!
-</p>
+<mat-card class="example-card">
+  <img mat-card-image src="{{ mySelectedArtist.image }}" />
+
+  <mat-card-header>
+    <mat-card-title>{{ mySelectedArtist.name }}</mat-card-title>
+    <mat-card-subtitle>Categorias...</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ mySelectedArtist.description }}
+    </p>
+  </mat-card-content>
+</mat-card>

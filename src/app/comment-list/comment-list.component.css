@@ -1,0 +1,20 @@
+.center {
+    padding-left: 300px;
+    margin: 0 auto;
+    background-color: cadetblue;
+}
+
+.example-card {
+    max-width: 70%;
+    min-width: 400px;
+    margin: 5px 0px 0px 0px;
+    padding-bottom: 15px;
+  }
+
+  .example-card > * {
+    width: 100%;
+  }
+
+  .ancho {
+    width: 100%;
+  }

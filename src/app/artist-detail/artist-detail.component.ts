@@ -19,7 +19,7 @@ export class ArtistDetailComponent implements OnInit {
   }
 
   more(){
-    this.servArtist.artist = this.mySelectedArtist;
+    sessionStorage.setItem(this.servArtist.TOKEN, JSON.stringify(this.mySelectedArtist));
     this.router.navigateByUrl("/comments");
   }
 }
