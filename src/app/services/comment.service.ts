@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class CommentService {
   constructor(private http: HttpClient) {}
 
-  getAllArtists(artist: Artist): Observable<Comment[]> {
+  getAllCommentsByArtist(artist: Artist): Observable<Comment[]> {
     const body = new HttpParams()
       .set("idArtist", artist.idArtist + "");
     return this.http.post<Comment[]>(environment.urlGetAllCommentByArtist,body);
