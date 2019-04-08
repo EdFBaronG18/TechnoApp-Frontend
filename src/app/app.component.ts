@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserInformationService } from './services/user-information.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TechnoApp';
+
+  constructor(private userInfo: UserInformationService, private router: Router){
+  }
+
+  logout(){
+    this.userInfo.logout();
+    this.router.navigateByUrl("/login");
+  }
 }

@@ -20,7 +20,8 @@
       padding: 20px;
       border-radius: 20px;
       margin-top: 5%;
-      display: inline-block;   
+      display: inline-block; 
+      background-color: white;  
   }
 
   .manito {
