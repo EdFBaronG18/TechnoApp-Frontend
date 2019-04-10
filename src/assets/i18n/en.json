@@ -1,0 +1,35 @@
+{
+    "USERNAME":   "Username",
+    "PASSWORD":   "Password",
+    "LOGIN_LOGIN":      "Sign in",
+    "LOGIN_REGISTER1": "Do not have an account?",    
+    "LOGIN_REGISTER2": "Sign up",
+
+    "REGISTER_USERINFO":    "Create a new username for your account.",
+    "REGISTER_NAMEINFO":    "Enter your name.",
+    "REGISTER_PASSINFO":    "Create a new password.",
+    "REGISTER_CONFINFO":    "Confirm the password.",
+    "REGISTER_NAME":        "Name and surname",
+    "REGISTER_CONFIRM":     "Confirm your password",
+    "REGISTER_SIGNUP":      "Register",
+    "REGISTER_SIGNUP1":      "Do you have an account?",
+    "REGISTER_SIGNUP2":      "Sign up",
+    
+    "ARTIST_CATEGORY":      "Category:",
+    "ARTIST_SEEMORE":       "See more",
+
+    "ADD_ARTIST_NAME":      "Name",
+    "ADD_ARTIST_DESC":      "Description",
+    "ADD_ARTIST_URL":       "Enter the URL of an artist image",
+    "ADD_ARTIST_CATEGORY":  "Category",
+    "ADD_ARTIST_BACK":      "Return",
+    "ADD_ARTIST_ADD":       "Add artist",
+
+    "COMMENT_TEXTADD":      "Add a comment",
+    "COMMENT_SEND":         "Comment",
+
+    "SPANISH":              "Spanish",
+    "ENGLISH":              "English",
+    "ADD_ARTIST":           "Add Artist",
+    "LOGOUT":               "Logout"
+}

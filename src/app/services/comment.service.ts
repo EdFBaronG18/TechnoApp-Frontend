@@ -26,4 +26,10 @@ export class CommentService {
       .set("content", comment.content+"");
     return this.http.post(environment.urlAddComment, body).subscribe();
   }
+
+  removeComment(comment: Comment){
+    const body = new HttpParams()
+      .set("idComment", comment.idCommentary + "");
+    return this.http.post(environment.urlRemoveComment, body).subscribe();
+  }
 }

@@ -2,14 +2,14 @@
   <app-artist-profile [mySelectedArtist]="myArtist"></app-artist-profile>
 
   <div *ngFor="let comment of myComments">
-    <app-comment-detail [mySelectedComment]="comment"></app-comment-detail>
+    <app-comment-detail [mySelectedComment]="comment" [listComment] = myComments></app-comment-detail>
   </div>
 
   <div class="example-card">
     <mat-card>
       <mat-card-content>
         <mat-form-field class="ancho" appearance="outline">
-          <mat-label> Agrega un comentario... </mat-label>
+          <mat-label> {{'COMMENT_TEXTADD'| translate}}... </mat-label>
           <textarea
             matInput
             cdkTextareaAutosize
@@ -26,11 +26,11 @@
           color="primary"
           (click)="addNewComment()"
         >
-          Comentar
+        {{'COMMENT_SEND'| translate}}
         </button>
 
         <button mat-raised-button class="colorBack" (click)="goBack()">
-          Regresar
+            {{'ADD_ARTIST_BACK'| translate}}
         </button>
       </mat-card-content>
     </mat-card>

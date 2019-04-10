@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Comment } from '../model/object';
+import { Comment, User } from '../model/object';
+import { UserInformationService } from '../services/user-information.service';
+import { CommentService } from '../services/comment.service';
 
 @Component({
   selector: 'app-comment-detail',
@@ -9,14 +11,17 @@ import { Comment } from '../model/object';
 export class CommentDetailComponent implements OnInit {
 
   @Input() mySelectedComment : Comment;
-
-  constructor() {
-    
+  @Input() listComment: Array<Comment>;
+  user: User;
+  constructor(private userInfo: UserInformationService, private commentService: CommentService) {
+    this.user = userInfo.getUser();
    }
 
   ngOnInit() {
   }
 
   delete(){
+    this.commentService.removeComment(this.mySelectedComment);
+    this.listComment.splice(this.listComment.indexOf(this.mySelectedComment), 1);
   }  
 }

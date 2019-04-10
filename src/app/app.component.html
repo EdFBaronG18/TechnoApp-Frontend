@@ -4,7 +4,7 @@
     <span class="menu-spacer"></span>
 
     <div style="margin-right: 15px; font-size: 14px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-      Español
+        {{'SPANISH'| translate}}
       <mat-slide-toggle
         [(ngModel)]="check"
         (change)="changeLanguage()"
@@ -12,14 +12,14 @@
         color="primary"
       >
       </mat-slide-toggle>
-      Ingles
+      {{'ENGLISH'| translate}}
     </div>
     <div *ngIf="this.userInfo.isLogged()">
       <button mat-button (click)="addArtist()">
-        Agregar Artista
+          {{'ADD_ARTIST'| translate}}
       </button>
       <button mat-button (click)="logout()">
-        Cerrar Sesión
+          {{'LOGOUT'| translate}}
       </button>
     </div>
   </mat-toolbar-row>
