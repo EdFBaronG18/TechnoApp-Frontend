@@ -1,5 +1,13 @@
 <div class="card">
   <mat-card class="example-card">
+    <button
+      mat-icon-button
+      style="float: right;"
+      color="primary"
+      (click)="delete()"
+    >
+      <mat-icon>delete_sweep</mat-icon>
+    </button>
     <mat-card-header>
       <mat-card-title>{{ mySelectedComment.user.name }}</mat-card-title>
       <mat-card-subtitle>{{

@@ -17,9 +17,6 @@ export class CommentDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDateString(): number{ 
-    return this.mySelectedComment.create.getDate();
-  }
-
-  
+  delete(){
+  }  
 }

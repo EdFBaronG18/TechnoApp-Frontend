@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'TechnoApp';
-
+  check : boolean;
+  
   constructor(private userInfo: UserInformationService, private router: Router){
   }
 
@@ -20,5 +21,9 @@ export class AppComponent {
 
   addArtist(){
     this.router.navigateByUrl("/addArtist");
+  }
+
+  changeLanguage(){
+
   }
 }

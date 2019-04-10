@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]

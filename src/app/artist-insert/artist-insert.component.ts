@@ -54,7 +54,7 @@ export class ArtistInsertComponent implements OnInit {
     if (good) {
       console.log(this.myCategorySelected);
       
-      this.myArtist.category = this.myCategorySelected;
+      this.myArtist.categories = this.myCategorySelected;
       this.artistService.insertArtist(this.myArtist);
       this.myArtist = new Artist();
       this.myCategorySelected = null;

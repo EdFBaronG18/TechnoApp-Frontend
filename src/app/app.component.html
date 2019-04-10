@@ -2,6 +2,18 @@
   <mat-toolbar-row>
     <span>TechnoAPP</span>
     <span class="menu-spacer"></span>
+
+    <div style="margin-right: 15px; font-size: 14px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+      Español
+      <mat-slide-toggle
+        [(ngModel)]="check"
+        (change)="changeLanguage()"
+        style="margin-left: 10px; margin-right: 10px;"
+        color="primary"
+      >
+      </mat-slide-toggle>
+      Ingles
+    </div>
     <div *ngIf="this.userInfo.isLogged()">
       <button mat-button (click)="addArtist()">
         Agregar Artista
