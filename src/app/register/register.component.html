@@ -2,7 +2,7 @@
   <div class="container2">
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Usuario</mat-label>
+        <mat-label>{{'USERNAME'| translate}}</mat-label>
         <input
           matInput
           autocomplete="username"
@@ -10,24 +10,24 @@
           name="username"
         />
         <mat-icon matSuffix color="primary">alternate_email</mat-icon>
-        <mat-hint>Cree un nuevo nombre de usuario para su cuenta.</mat-hint>
+        <mat-hint>{{'REGISTER_USERINFO'| translate}}</mat-hint>
       </mat-form-field>
 
       <br />
       <br />
 
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Nombre y Apellido</mat-label>
+        <mat-label>{{'REGISTER_NAME'| translate}}</mat-label>
         <input matInput [(ngModel)]="myUser.name" name="name" />
         <mat-icon matSuffix color="primary">face</mat-icon>
-        <mat-hint>Ingrese su nombre y apellido.</mat-hint>
+        <mat-hint>{{'REGISTER_NAMEINFO'| translate}}</mat-hint>
       </mat-form-field>
 
       <br />
       <br />
 
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Contraseña</mat-label>
+        <mat-label>{{'PASSWORD'| translate}}</mat-label>
         <input
           matInput
           autocomplete="new-password"
@@ -36,14 +36,14 @@
           name="passA"
         />
         <mat-icon matSuffix color="primary">vpn_key</mat-icon>
-        <mat-hint>Cree una nueva contraseña.</mat-hint>
+        <mat-hint>{{'REGISTER_PASSINFO'| translate}}</mat-hint>
       </mat-form-field>
 
       <br />
       <br />
 
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Confirme su contraseña.</mat-label>
+        <mat-label>{{'REGISTER_CONFINFO'| translate}}</mat-label>
         <input
           matInput
           autocomplete="new-password"
@@ -52,20 +52,20 @@
           name="passB"
         />
         <mat-icon matSuffix color="primary">vpn_key</mat-icon>
-        <mat-hint>Confirme la contraseña.</mat-hint>
+        <mat-hint>{{'REGISTER_CONFIRM'| translate}}</mat-hint>
       </mat-form-field>
 
       <br />
       <br />
       <button mat-raised-button color="primary" (click)="addNewUser()">
-        <mat-label>Registrar</mat-label>
+        <mat-label>{{'REGISTER_SIGNUP'| translate}}</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>
       <br />
       <br />
       <span class="textRegister" style="font-style: italic;"
-        >¿Tienes cuenta?
-        <b (click)="this.router.navigateByUrl('/login')">Inicia Sesión</b></span
+        >{{'REGISTER_SIGNUP1'| translate}}
+        <b (click)="this.router.navigateByUrl('/login')">{{'REGISTER_SIGNUP2'| translate}}</b></span
       >
     </form>
   </div>

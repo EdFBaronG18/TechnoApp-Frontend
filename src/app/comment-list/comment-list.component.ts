@@ -36,6 +36,8 @@ export class CommentListComponent implements OnInit {
   addNewComment() {
     console.log("add comment");
     this.myComment.create = new Date();
+    if(this.myComment.content.length == 0)
+      return;
     this.commentService.insertComment(this.myComment);
     this.myArtist.comments.push(this.myComment);
    // this.myComments.push(this.myComment);

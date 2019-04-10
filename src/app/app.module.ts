@@ -17,13 +17,16 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
 import {MatCardModule} from '@angular/material/card';
 import { NeedAuthGuard } from 'src/NeedAuthGuard';
-import { HttpClient } from 'selenium-webdriver/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ArtistInsertComponent } from './artist-insert/artist-insert.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+import {TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -49,9 +52,24 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     HttpClientModule,
     MatToolbarModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+        }
+      }
+    )
+
   ],
   providers: [NeedAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+ }
+ 

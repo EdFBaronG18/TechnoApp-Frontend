@@ -50,6 +50,10 @@ export class ArtistInsertComponent implements OnInit {
       this.registerError += "- Seleccione categoría válida\n";
       good = false;
     }
+    if(this.myArtist.image.length == 0){
+      this.registerError += "- URL Vacío\n";
+      good = false;
+    }
 
     if (good) {
       console.log(this.myCategorySelected);

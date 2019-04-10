@@ -1,0 +1,36 @@
+{
+    "USERNAME":             "Usuario",
+    "PASSWORD":             "Contraseña",
+
+    "LOGIN_LOGIN":          "Iniciar Sesión",
+    "LOGIN_REGISTER1":      "¿No tienes cuenta?",    
+    "LOGIN_REGISTER2":      "Regístrate",
+
+    "REGISTER_USERINFO":    "Cree un nuevo nombre de usuario para su cuenta.",
+    "REGISTER_NAMEINFO":    "Ingrese su nombre y apellido.",
+    "REGISTER_PASSINFO":    "Cree una nueva contraseña.",
+    "REGISTER_CONFINFO":    "Confirme la contraseña.",
+    "REGISTER_NAME":        "Nombre y Apellido",
+    "REGISTER_CONFIRM":     "Confirme su contraseña",
+    "REGISTER_SIGNUP":      "Registrar",
+    "REGISTER_SIGNUP1":     "¿Tiene cuenta?",
+    "REGISTER_SIGNUP2":     "Inicia Sesión",
+
+    "ARTIST_CATEGORY":      "Categoría:",
+    "ARTIST_SEEMORE":       "Ver más",
+
+    "ADD_ARTIST_NAME":      "Nombre",
+    "ADD_ARTIST_DESC":      "Descripción",
+    "ADD_ARTIST_URL":       "Ingrese la URL de una imagen del artista",
+    "ADD_ARTIST_CATEGORY":  "Categoría",
+    "ADD_ARTIST_BACK":      "Regresar",
+    "ADD_ARTIST_ADD":       "Agregar artista",
+
+    "COMMENT_TEXTADD":      "Agregar un comentario",
+    "COMMENT_SEND":         "Comentar",
+    
+    "SPANISH":              "Español",
+    "ENGLISH":              "Ingles",
+    "ADD_ARTIST":           "Agregar Artista",
+    "LOGOUT":               "Cerrar Sesión"
+}

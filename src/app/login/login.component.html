@@ -2,13 +2,13 @@
   <div class="container2">
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Usuario</mat-label>
+        <mat-label>{{'USERNAME'| translate}}</mat-label>
         <input matInput [(ngModel)]="username" autocomplete="username" name = "user" />
         <mat-icon matSuffix color="primary">face</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Contraseña</mat-label>
+        <mat-label>{{'PASSWORD'| translate}}</mat-label>
         <input
           matInput
           [(ngModel)]="password"
@@ -29,14 +29,14 @@
       <br />
       <br />
       <button mat-raised-button (click) = "login()" color="primary">
-        <mat-label>Iniciar Sesión</mat-label>
+        <mat-label>{{'LOGIN_LOGIN'| translate}}</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>
       <br />
       <br />
       <span class="textRegister" style="font-style: italic;"
-        >¿No tienes cuenta?
-        <b (click)="this.router.navigateByUrl('/register')">Regístrate</b></span
+        >{{'LOGIN_REGISTER1'| translate}}
+        <b (click)="this.router.navigateByUrl('/register')">{{'LOGIN_REGISTER2'| translate}}</b></span
       >
     </form>
   </div>

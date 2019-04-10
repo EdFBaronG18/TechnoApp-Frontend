@@ -2,7 +2,7 @@
   <div class="container2">
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Nombre</mat-label>
+        <mat-label>{{'ADD_ARTIST_NAME'| translate}}</mat-label>
         <input
           matInput
           autocomplete="nombre"
@@ -13,7 +13,7 @@
       </mat-form-field>
 
       <mat-form-field class="ancho" appearance="outline">
-        <mat-label>Descripción</mat-label>
+        <mat-label>{{'ADD_ARTIST_DESC'| translate}}</mat-label>
         <textarea
           matInput
           cdkTextareaAutosize
@@ -25,7 +25,7 @@
       </mat-form-field>
 
       <mat-form-field class="ancho" appearance="outline">
-        <mat-label>Ingrese la URL de una imagen del artista</mat-label>
+        <mat-label>{{'ADD_ARTIST_URL'| translate}}</mat-label>
         <textarea
           matInput
           cdkTextareaAutosize
@@ -36,7 +36,7 @@
         <mat-icon matSuffix color="primary">photo</mat-icon>
       </mat-form-field>
       <mat-form-field class="ancho" appareance="outline">
-        <mat-label>Categoria</mat-label>
+        <mat-label>{{'ADD_ARTIST_CATEGORY'| translate}}</mat-label>
         <mat-select [(ngModel)]="myCategorySelected" name = "category">
           <mat-option
             *ngFor="let categoria of myCategories"
@@ -51,12 +51,12 @@
 
       <br />
       <br />
-      <button mat-raised-button style="background-color: rgb(194, 233, 235); float: left;" (click)="goBack()">
-        <mat-label>Regresar</mat-label>
+      <button mat-raised-button style="background-color: cadetblue; float: left;" (click)="goBack()">
+        <mat-label>{{'ADD_ARTIST_BACK'| translate}}</mat-label>
       </button>
 
       <button mat-raised-button color="primary" style="float: right;" (click)="addArtist()">
-        <mat-label>Agregar artista</mat-label>
+        <mat-label>{{'ADD_ARTIST_ADD'| translate}}</mat-label>
         <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>
     </form>

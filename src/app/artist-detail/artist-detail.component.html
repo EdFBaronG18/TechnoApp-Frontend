@@ -3,7 +3,7 @@
     <mat-card-header>
       <mat-card-title>{{ mySelectedArtist.name }}</mat-card-title>
       <mat-card-subtitle
-        > Categorias:  {{ mySelectedArtist.categories.name }}</mat-card-subtitle
+        > {{'ARTIST_CATEGORY'| translate}}  {{ mySelectedArtist.categories.name }}</mat-card-subtitle
       >
     </mat-card-header>
     <img mat-card-image src="{{ mySelectedArtist.image }}" />
@@ -28,7 +28,7 @@
         color="primary"
         (click)="more()"
       >
-      <mat-label>Ver más</mat-label>
+      <mat-label>{{'ARTIST_SEEMORE'| translate}}</mat-label>
       <mat-icon matSuffix>arrow_forward_ios</mat-icon>
       </button>
     </mat-card-actions>
